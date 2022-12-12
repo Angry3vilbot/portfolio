@@ -1,0 +1,50 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+#meme-container:not(.hidden){
+  animation: opacityAnimation 3s;
+}
+.ukraine{
+  background: url(../src/assets/ukraine.svg);
+  background-size: contain;
+  background-clip: text;
+}
+.blaze-pagination>*{
+  background-color: #d1d5db2f;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 999px;
+  transition: all 0.25s;
+}
+.blaze-pagination>*.active{
+  background-color: #701a75;
+  height: 1rem;
+  width: 1rem;
+}
+@keyframes opacityAnimation {
+  from {
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
