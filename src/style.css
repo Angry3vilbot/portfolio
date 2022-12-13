@@ -39,6 +39,9 @@
   width: 1rem;
 }
 
+.blaze-pagination>*:not(.active):hover {
+  background-color: #901d96;
+}
 @keyframes opacityAnimation {
   from {
     opacity: 0;
