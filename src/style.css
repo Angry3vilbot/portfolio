@@ -42,6 +42,17 @@
 .blaze-pagination>*:not(.active):hover {
   background-color: #901d96;
 }
+
+.project-btn{
+  box-shadow: inset 0 0 0 0 var(--tw-shadow-color);
+  transition: ease-out 0.3s;
+  border-radius: 20px;
+}
+
+.project-btn:hover{
+  box-shadow: inset 6rem 0 0 0 var(--tw-shadow-color);
+}
+
 @keyframes opacityAnimation {
   from {
     opacity: 0;
