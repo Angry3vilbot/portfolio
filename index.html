@@ -18,7 +18,7 @@
     </section>
     <section id="about">
       <h2 class="text-4xl text-center mb-4">About Me</h3>
-      <div class="relative">
+      <div class="relative pl-2">
         <p class="text-2xl mb-5"><span id="grievous" class="underline underline-offset-4 hover:cursor-pointer">Hello
             There!</span> My name
           is Mykhailo, I am a passionate web developer from <span class="text-transparent ukraine">Ukraine</span>.</p>
@@ -97,9 +97,15 @@
         </div>
       </div>
     </section>
-    <section id="freetime" class="relative mt-28">
+    <section id="freetime" class="grid mt-36">
       <h2 class="text-4xl text-center mb-4">Free time</h2>
-      <p class="text-2xl">In my free time I enjoy <span
+      <div class="flex relative justify-self-center h-24 w-96">
+        <img src="./src/assets/gaming.png" alt="" class="gaming hidden absolute top-0 left-5 h-24">
+        <img src="./src/assets/vr.gif" alt="" class="vr hidden absolute top-0 left-[7.5rem] h-24">
+        <img src="./src/assets/cycling.webp" alt="" class="cycling hidden absolute top-0 left-[11.5rem] h-24">
+        <img src="./src/assets/english.webp" alt="" class="english hidden absolute top-0 left-[22rem] h-24">
+      </div>
+      <p class="text-2xl pl-2 text-center">In my free time I enjoy <span
           class="text-fuchsia-700 underline underline-offset-4 transition-all duration-300 hover:cursor-default hover:underline-offset-8"
           data-identifier="gaming">gaming</span>,
         <span
@@ -112,12 +118,9 @@
           class="text-fuchsia-700 underline underline-offset-4 transition-all duration-300 hover:cursor-default hover:underline-offset-8"
           data-identifier="english">learning English</span>
       </p>
-      <img src="./src/assets/gaming.png" alt="" class="gaming hidden absolute top-0 left-40 h-24">
-      <img src="./src/assets/vr.gif" alt="" class="vr hidden absolute top-0 left-[17rem] h-24">
-      <img src="./src/assets/cycling.webp" alt="" class="cycling hidden absolute top-0 left-[20.5rem] h-24">
-      <img src="./src/assets/english.webp" alt="" class="english hidden absolute top-0 left-[31rem] h-24">
+      
     </section>
-    <section id="projects">
+    <section id="projects" class="mt-28">
       <h2 class="text-4xl text-center mb-4">My Projects</h2>
       <div class="flex flex-col">
         <div class="flex w-full mb-8">
@@ -125,7 +128,7 @@
             <a href="https://angry3vilbot.github.io/find-the-country/"><img src="./src/assets/findthecountry.png"
                 alt="image showing the web app" class="w-full h-full"></a>
           </div>
-          <div class="flex flex-col justify-self-end mr-14 h-96 pl-2">
+          <div class="flex flex-col justify-self-end mr-14 h-96 pl-5">
             <h2 class="text-3xl text-fuchsia-700">Find The Country</h2>
             <h3 class="text-2xl text-gray-400 mb-5">A Country-Finding Game</h3>
             <p>A full-stack web app featuring authorization and database from Firebase</p>
@@ -183,7 +186,7 @@
             <a href="https://angry3vilbot.github.io/wettit"><img src="./src/assets/wettit2.png"
                 alt="image showing the web app" class="w-full h-full"></a>
           </div>
-          <div class="flex flex-col justify-self-end mr-14 h-96 pl-2">
+          <div class="flex flex-col justify-self-end mr-14 h-96 pl-5">
             <h2 class="text-3xl text-fuchsia-700">Wettit</h2>
             <h3 class="text-2xl text-gray-400 mb-5">Reddit Clone</h3>
             <p>A Reddit clone, currently in development. The current version has most of the front-end finished.</p>
