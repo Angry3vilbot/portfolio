@@ -43,7 +43,7 @@
   background-color: #901d96;
 }
 
-.project-btn{
+.project-btn, .learn-btn{
   box-shadow: inset 0 0 0 0 var(--tw-shadow-color);
   transition: ease-out 0.3s;
   border-radius: 20px;
@@ -51,6 +51,10 @@
 
 .project-btn:hover{
   box-shadow: inset 6rem 0 0 0 var(--tw-shadow-color);
+}
+
+.learn-btn:hover{
+  box-shadow: inset 8rem 0 0 0 var(--tw-shadow-color);
 }
 
 @keyframes opacityAnimation {

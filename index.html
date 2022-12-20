@@ -12,13 +12,14 @@
 <body>
   <div id="main">
     <nav></nav>
-    <section id="hero" class="h-screen">
-      <h2>Mykhailo Balaker</h2>
-      <h3>Full Stack Web Developer</h3>
+    <section id="hero" class="flex flex-col h-screen place-items-center justify-center">
+      <h2 class="text-6xl">Mykhailo Balaker</h2>
+      <h3 class="text-4xl"></h3>
+      <button class="border-2 border-fuchsia-700 w-32 learn-btn shadow-fuchsia-700" onclick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})">Learn More</button>
     </section>
-    <section id="about">
+    <section id="about" href="#about">
       <h2 class="text-4xl text-center mb-4">About Me</h3>
-      <div class="relative pl-2">
+      <div class="relative pl-2 pr-2">
         <p class="text-2xl mb-5"><span id="grievous" class="underline underline-offset-4 hover:cursor-pointer">Hello
             There!</span> My name
           is Mykhailo, I am a passionate web developer from <span class="text-transparent ukraine">Ukraine</span>.</p>
@@ -30,8 +31,8 @@
           left off, while also learning JavaScript and different libraries along the way.</p>
         <p class="text-2xl mb-5">Nowadays, I enjoy creating <span class="underline decoration-dotted"
             title="Like this one! :)">beautiful websites</span> and learning new things.</p>
-        <div class="hidden absolute top-0" id="meme-container">
-          <img class="fixed top-0 left-0 scale-50" alt="" aria-label="General Kenobi!" src="./src/assets/kenobi.gif">
+        <div class="hidden absolute bg-white top-0 w-48" id="meme-container">
+          <img alt="" aria-label="General Kenobi!" src="./src/assets/kenobi.gif">
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import BlazeSlider from 'blaze-slider'
+import TypeIt from 'typeit'
 import 'blaze-slider/dist/blaze.css'
 
 let hider: number
@@ -15,8 +16,8 @@ function showMeme() {
 }
 
 function showImage(ev: any) {
-    if(ev.type === 'mouseover'){
-        switch(ev.currentTarget.attributes[1].nodeValue){
+    if (ev.type === 'mouseover') {
+        switch (ev.currentTarget.attributes[1].nodeValue) {
             case 'gaming':
                 ev.currentTarget.parentElement.parentElement.querySelector('.gaming').classList.remove('hidden')
                 break
@@ -31,8 +32,8 @@ function showImage(ev: any) {
                 break
         }
     }
-    else{
-        switch(ev.currentTarget.attributes[1].nodeValue){
+    else {
+        switch (ev.currentTarget.attributes[1].nodeValue) {
             case 'gaming':
                 ev.currentTarget.parentElement.parentElement.querySelector('.gaming').classList.add('hidden')
                 break
@@ -54,6 +55,18 @@ document.querySelector('#freetime')?.querySelectorAll('span').forEach((span) => 
     span.addEventListener('mouseover', showImage)
     span.addEventListener('mouseleave', showImage)
 })
+window.onload = () => {
+    new (TypeIt as any)('#hero>h2', {
+        afterComplete: function (instance: any) {
+            instance.destroy()
+            new (TypeIt as any)('#hero>h3', {
+                afterComplete: function (instance: any) {
+                    instance.destroy()
+                }
+            }).type('Full Stack Web Developer').go()
+        }
+    }).go()
+}
 
 const slider: any = document.querySelector('.blaze-slider')
 new BlazeSlider(slider, {
