@@ -56,10 +56,10 @@ document.querySelector('#freetime')?.querySelectorAll('span').forEach((span) => 
     span.addEventListener('mouseleave', showImage)
 })
 window.onload = () => {
-    new (TypeIt as any)('#hero>h2', {
+    new (TypeIt as any)('#hero>h2', {   
         afterComplete: function (instance: any) {
             instance.destroy()
-            new (TypeIt as any)('#hero>h3', {
+            new (TypeIt as any)('#hero>p', {
                 afterComplete: function (instance: any) {
                     instance.destroy()
                 }
