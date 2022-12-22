@@ -1,5 +1,6 @@
 import BlazeSlider from 'blaze-slider'
 import TypeIt from 'typeit'
+import World from './threejs/World.js'
 import 'blaze-slider/dist/blaze.css'
 
 let hider: number
@@ -66,6 +67,16 @@ window.onload = () => {
             }).type('Full Stack Web Developer').go()
         }
     }).go()
+
+    async function main(){
+        const container = document.querySelector('#threejs-container')
+        const world = new World(container, 'white')
+        await world.init()
+        world.render()
+    }
+    main().catch((err) => {
+        console.error(err)
+    })
 }
 
 const slider: any = document.querySelector('.blaze-slider')
