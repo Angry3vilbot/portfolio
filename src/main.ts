@@ -67,16 +67,34 @@ window.onload = () => {
             }).type('Full Stack Web Developer').go()
         }
     }).go()
-
+    interface World{
+        init: Function,
+        start: Function,
+        stop: Function
+    }
+    let world: World
     async function main(){
         const container = document.querySelector('#threejs-container')
-        const world = new World(container, 'white')
+        world = new World(container, 'white')
         await world.init()
-        world.render()
+        world.start()
     }
     main().catch((err) => {
         console.error(err)
     })
+    function intersectionCallback(entries: any){
+        entries.forEach((entry: any) => {
+            if(entry.isIntersecting) {
+                world.start()
+            }
+            else{
+                world.stop()
+            }
+        });
+    }
+    let observer = new IntersectionObserver(intersectionCallback, intersectionOptions)
+    let target = document.querySelector('#threejs-container')!;
+    observer.observe(target);
 }
 
 const slider: any = document.querySelector('.blaze-slider')
@@ -96,4 +114,10 @@ new BlazeSlider(slider, {
         slidesToShow: 1,
     },
 })
+const intersectionOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+}
+
 export { }
