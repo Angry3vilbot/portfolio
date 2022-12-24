@@ -9,10 +9,12 @@ export default async function loadModel() {
         loader.loadAsync(laptopModel)
     ])
     console.log(laptopData)
-    const laptop = setupModel(laptopData)
+    const laptop = await setupModel(laptopData)
     laptop.position.set(0, 0, 0);
-    laptop.rotation.y = 180
-    laptop.tick = function(){}
+    laptop.rotation.y = 0
+    laptop.tick = function(){
+        laptop.rotation.y+=0.005
+    }
     
     return{ laptop }
 }

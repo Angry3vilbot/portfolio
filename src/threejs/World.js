@@ -24,7 +24,6 @@ export default class World {
         controls = createOrbitControls(camera, renderer.domElement);
         
         const { ambientLight, mainLight } = createLights();
-        
         loop.updatables.push(controls);
         scene.add(ambientLight, mainLight);
         
