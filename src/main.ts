@@ -57,7 +57,7 @@ document.querySelector('#freetime')?.querySelectorAll('span').forEach((span) => 
     span.addEventListener('mouseleave', showImage)
 })
 window.onload = () => {
-    new (TypeIt as any)('#hero>h2', {   
+    new (TypeIt as any)('#hero>h2', {
         afterComplete: function (instance: any) {
             instance.destroy()
             new (TypeIt as any)('#hero>p', {
@@ -67,13 +67,13 @@ window.onload = () => {
             }).type('Full Stack Web Developer').go()
         }
     }).go()
-    interface World{
+    interface World {
         init: Function,
         start: Function,
         stop: Function
     }
     let world: World
-    async function main(){
+    async function main() {
         const container = document.querySelector('#threejs-container')
         world = new World(container, 'white')
         await world.init()
@@ -82,12 +82,12 @@ window.onload = () => {
     main().catch((err) => {
         console.error(err)
     })
-    function intersectionCallback(entries: any){
+    function intersectionCallback(entries: any) {
         entries.forEach((entry: any) => {
-            if(entry.isIntersecting) {
+            if (entry.isIntersecting) {
                 world.start()
             }
-            else{
+            else {
                 world.stop()
             }
         });
@@ -109,15 +109,14 @@ new BlazeSlider(slider, {
     '(max-width: 900px)': {
         slidesToShow: 2,
     },
-    '(max-width: 500px)': {
-        loop: true,
+    '(max-width: 600px)': {
         slidesToShow: 1,
     },
 })
 const intersectionOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1
+    threshold: 0.3
 }
 
 export { }

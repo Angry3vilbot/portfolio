@@ -15,7 +15,8 @@
       <div id="threejs-container" class="w-full h-full absolute -z-10"></div>
       <h2 class="text-6xl" aria-label="Mykhailo Balaker">Mykhailo Balaker</h2>
       <p class="text-4xl" aria-label="Full Stack Web Developer"></p>
-      <button class="border-2 border-fuchsia-700 w-32 learn-btn shadow-fuchsia-700 mt-5" onclick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+      <button class="border-2 border-fuchsia-700 w-32 learn-btn shadow-fuchsia-700 mt-5"
+        onclick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})">Learn More</button>
     </section>
     <section id="about">
       <h2 class="text-4xl text-center mb-4">About Me</h2>
@@ -39,7 +40,7 @@
     <section id="technologies" class="mt-28">
       <h2 class="text-4xl text-center mb-4">Technologies</h2>
       <div class="blaze-slider grid">
-        <div class="blaze-container flex flex-col items-center justify-self-center w-1/2">
+        <div class="blaze-container flex flex-col items-center justify-self-center min-[1200px]:w-1/2">
           <div class="blaze-track-container relative">
             <div class="blaze-track flex">
               <div class="grid items-center justify-items-center border-2 border-dotted border-fuchsia-700 h-32">
@@ -119,20 +120,21 @@
           class="text-fuchsia-700 underline underline-offset-4 transition-all duration-300 hover:cursor-default hover:underline-offset-8"
           data-identifier="english">learning English</span>
       </p>
-      
+
     </section>
     <section id="projects" class="mt-28">
       <h2 class="text-4xl text-center mb-4">My Projects</h2>
       <div class="flex flex-col">
-        <div class="flex w-full mb-8">
-          <div class="flex self-start justify-end ml-14 shadow-2xl shadow-fuchsia-700 w-[45%] h-96 bg-fuchsia-600">
+        <div class="project flex w-full mb-8">
+          <div
+            class="flex self-start max-[1000px]:absolute z-[-1] justify-end ml-14 shadow-2xl shadow-fuchsia-700 bg-fuchsia-600 w-[45%] max-[1000px]:w-full h-96">
             <a href="https://angry3vilbot.github.io/find-the-country/"><img src="./src/assets/findthecountry.png"
                 alt="image showing the web app" class="w-full h-full"></a>
           </div>
-          <div class="flex flex-col justify-self-end mr-14 h-96 pl-5">
+          <div class="project-text flex flex-col mr-14 h-96 pl-5">
             <h2 class="text-3xl text-fuchsia-700">Find The Country</h2>
             <h3 class="text-2xl text-gray-400 mb-5">A Country-Finding Game</h3>
-            <p>A full-stack web app featuring authorization and database from Firebase</p>
+            <p>A web game featuring authorization and database from Firebase</p>
             <div class="mt-auto">
               <p class="text-xl"><b>Technologies:</b> <span
                   class="inline-block bg-[url('../src/assets/react-icon.png')] bg-contain bg-no-repeat bg-center w-8 h-8"
@@ -154,12 +156,13 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-row-reverse justify-items-end w-full mb-8">
-          <div class="flex mr-14 shadow-2xl shadow-fuchsia-700 w-[45%] h-96 bg-fuchsia-600">
+        <div class="project flex flex-row-reverse justify-items-end w-full mb-8">
+          <div
+            class="flex mr-14 max-[1000px]:absolute z-[-1] shadow-2xl shadow-fuchsia-700 bg-fuchsia-600 w-[45%] max-[1000px]:w-full h-96">
             <a href="https://angry3vilbot.github.io/shopping-website"><img src="./src/assets/laptopshop.png"
                 alt="image showing the web app" class="w-full h-full"></a>
           </div>
-          <div class="flex flex-col justify-self-start ml-14 h-96">
+          <div class="project-text flex flex-col ml-14 h-96">
             <h2 class="text-3xl text-fuchsia-700">LapTopShopUA</h2>
             <h3 class="text-2xl text-gray-400 mb-5">Laptop Online Store</h3>
             <p>A shopping website made with React. Allows users to browse, add items to cart and see their price there.
@@ -182,12 +185,13 @@
             </div>
           </div>
         </div>
-        <div class="flex w-full mb-8">
-          <div class="flex self-start justify-end ml-14 shadow-2xl shadow-fuchsia-700 w-[45%] h-96 bg-fuchsia-600">
+        <div class="project flex w-full mb-8">
+          <div
+            class="flex self-start max-[1000px]:absolute z-[-1] justify-end ml-14 shadow-2xl shadow-fuchsia-700 bg-fuchsia-600 w-[45%] h-96">
             <a href="https://angry3vilbot.github.io/wettit"><img src="./src/assets/wettit2.png"
                 alt="image showing the web app" class="w-full h-full"></a>
           </div>
-          <div class="flex flex-col justify-self-end mr-14 h-96 pl-5">
+          <div class="project-text flex flex-col mr-14 h-96 pl-5">
             <h2 class="text-3xl text-fuchsia-700">Wettit</h2>
             <h3 class="text-2xl text-gray-400 mb-5">Reddit Clone</h3>
             <p>A Reddit clone, currently in development. The current version has most of the front-end finished.</p>
@@ -195,7 +199,7 @@
               <p class="text-xl"><b>Technologies:</b> <span
                   class="inline-block bg-[url('../src/assets/react-icon.png')] bg-contain bg-no-repeat bg-center w-8 h-8"
                   title="React"></span>
-                  <span
+                <span
                   class="inline-block bg-[url('../src/assets/Typescript.svg')] bg-contain bg-no-repeat bg-center w-8 h-8"
                   title="TypeScript"></span>
               </p>
@@ -214,15 +218,15 @@
     <footer class="flex gap-5 justify-center">
       <div class="w-fit h-fit">
         <a href="https://github.com/Angry3vilbot" class="w-8 h-8 text-[1.75rem]"><span
-          class="inline-block bg-[url('../src/assets/github.png')] bg-contain bg-no-repeat bg-center w-8 h-8"></span></a>
+            class="inline-block bg-[url('../src/assets/github.png')] bg-contain bg-no-repeat bg-center w-8 h-8"></span></a>
       </div>
       <div class="w-fit h-fit">
         <a href="https://www.linkedin.com/in/mykhailo-balaker-881b41253" class="w-8 h-8 text-[1.75rem]"><span
-          class="inline-block bg-[url('../src/assets/linkedin.png')] bg-contain bg-no-repeat bg-center w-8 h-8"></span></a>
+            class="inline-block bg-[url('../src/assets/linkedin.png')] bg-contain bg-no-repeat bg-center w-8 h-8"></span></a>
       </div>
       <div class="w-fit h-fit">
         <a href="mailto:myh.balaker@gmail.com" class="w-8 h-8 text-[1.75rem]"><span
-          class="inline-block bg-[url('../src/assets/mail.svg')] bg-contain bg-no-repeat bg-center w-8 h-8"></span></a>
+            class="inline-block bg-[url('../src/assets/mail.svg')] bg-contain bg-no-repeat bg-center w-8 h-8"></span></a>
       </div>
     </footer>
   </div>

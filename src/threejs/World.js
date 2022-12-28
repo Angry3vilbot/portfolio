@@ -18,14 +18,15 @@ export default class World {
         camera = createCamera();
         renderer = createRenderer();
         scene = createScene(0x242424);
+        scene.position.set(0, 0, 0);
         loop = new Loop(camera, scene, renderer);
         container.append(renderer.domElement);
 
         controls = createOrbitControls(camera, renderer.domElement);
         
-        const { ambientLight, mainLight } = createLights();
+        const { ambientLight } = createLights();
         loop.updatables.push(controls);
-        scene.add(ambientLight, mainLight);
+        scene.add(ambientLight);
         
         const resizer = new Resizer(container, camera, renderer)
     }
