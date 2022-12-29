@@ -14,7 +14,7 @@ export default async function loadModel() {
     ])
     progressBarContainer.classList.add('hidden')
     mainContainer.classList.remove('opacity-0')
-    console.log(laptopData)
+    document.body.classList.remove('overflow-hidden')
     const laptop = await setupModel(laptopData)
     laptop.position.set(0, 0, -5);
     laptop.rotation.y = 0
